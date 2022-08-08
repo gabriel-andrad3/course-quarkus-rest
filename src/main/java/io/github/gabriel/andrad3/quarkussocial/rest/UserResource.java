@@ -31,7 +31,7 @@ public class UserResource {
 
     @POST
     @Transactional
-    public Response createUser( CreateUserRequest userRequest) {
+    public Response createUser(CreateUserRequest userRequest) {
         Set<ConstraintViolation<CreateUserRequest>> violations = validator.validate(userRequest);
 
         if(!violations.isEmpty()) {
